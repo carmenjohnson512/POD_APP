@@ -9,9 +9,9 @@ const db = {};
 //DB connection with Sequelize
 //check if env var is set
 let sequelize;
-if (process.env.APP_ENV) {
+if (process.env.JAWSDB_URL) {
   //printing message if uding dev enviro nment
-  console.log(process.env.APP_ENV === "development" ? "USING DEV Vars for DB Connection\n" : "");
+  // console.log(process.env.APP_ENV === "development" ? "USING DEV Vars for DB Connection\n" : "");
   //instantiating DB connection with sequelize
   sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASS, {
     host: process.env.DB_HOST,

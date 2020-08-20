@@ -20,13 +20,13 @@ CREATE DATABASE POD_DB;
 --   `name` varchar(255)
 -- );
 
--- CREATE TABLE `user_classes` (
+-- CREATE TABLE `users_courses` (
 --   `date_completed` date,
 --   `user_id` integer,
 --   `classes_id` integer
 -- );
 
--- CREATE TABLE `classes` (
+-- CREATE TABLE `courses` (
 --   `id` integer PRIMARY KEY AUTO_INCREMENT,
 --   `name` varchar(255),
 --   `date_created` date,
