@@ -1,3 +1,11 @@
+const url = window.location.href.split("/");
+const token =window.localStorage.getItem('Token');
+if(token){
+  $.ajaxSetup({
+    headers:{'x-access-token': token
+    }});
+}
+
 $(document).foundation()
 
 const pwd_create = document.getElementById("pwd1");
@@ -51,8 +59,8 @@ $(".filter-simple-button").click(function() {
       console.log("Am here")
       //Ajax call here
       $.ajax({
-        // url: location.hostname + "/api/auth/signin",
-        url: "http://localhost:8000/api/auth/signin",
+        url: `${url[0]}//${url[2]}/api/auth/signin`,
+        //url: "http://localhost:8000/api/auth/signin",
         method: "POST",
         data: {
               "email": userId,
@@ -108,8 +116,8 @@ $(".filter-simple-button").click(function() {
       console.log(fname, lname, email, pwd)  
 
       $.ajax({
-        // url: location.hostname + "/api/auth/signup",
-        url: "http://localhost:8000/api/auth/signup",
+        // url: "http://localhost:8000/api/auth/signup",
+        url: `${url[0]}//${url[2]}/api/auth/signup`,
         method: "POST",
         data: {
               "first_name": fname,

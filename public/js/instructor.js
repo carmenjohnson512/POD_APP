@@ -1,3 +1,11 @@
+//const url = window.location.href.split("/");
+//const token =window.localStorage.getItem('Token');
+if(token){
+  $.ajaxSetup({
+    headers:{'x-access-token': token
+    }});
+}
+
 $(document).foundation()
 // const handlebars = require("express-handlebars");
 // const db = require("../models/index");
@@ -61,8 +69,8 @@ $(".course-modal-submit-button").on("click", function(){
     console.log(fname, lname, email, pwd)  
 
     $.ajax({
-      // url: location.hostname + "/api/auth/signup",
-      url: "http://localhost:8000/api/auth/signup",
+      // url: "http://localhost:8000/api/auth/signup",
+      url: `${url[0]}//${url[2]}/api/auth/signup`,
       method: "POST",
       data: {
             "first_name": fname,

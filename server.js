@@ -36,7 +36,7 @@ app.use(express.json()); //request body parser
 
 //Setting static directory = public
 app.use(express.static("public"));
-app.use(express.static("views"));
+//app.use(express.static("views"));
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 

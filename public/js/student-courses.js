@@ -1,5 +1,5 @@
-const url = window.location.href.split("/");
-const token =window.localStorage.getItem('Token');
+//const url = window.location.href.split("/");
+//const token =window.localStorage.getItem('Token');
 if(token){
   $.ajaxSetup({
     headers:{'x-access-token': token

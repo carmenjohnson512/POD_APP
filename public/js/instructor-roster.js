@@ -1,10 +1,10 @@
-const url = window.location.href.split("/");
+//const url = window.location.href.split("/");
 // let urlinsid = url[url.length - 1];
 // urlinsid = urlinsid.split("?");
 // let insid = urlinsid[1];
 // insid = insid.split("=");
 // const realinsid = Number.parseInt(insid[1]);
-const token =window.localStorage.getItem('Token');
+//const token =window.localStorage.getItem('Token');
 if(token){
   $.ajaxSetup({
     headers:{'x-access-token': token
